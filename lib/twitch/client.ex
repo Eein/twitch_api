@@ -6,12 +6,12 @@ defmodule Twitch.Client do
   @typedoc """
   Credentials for authorization
   """
-  @type auth :: %{client_id: String.t, access_token: String.t}
+  @type auth :: %{client_id: String.t(), access_token: String.t()}
 
   @typedoc """
   The client struct
   """
-  @type t :: %__MODULE__{auth: auth | nil, endpoint: String.t}
+  @type t :: %__MODULE__{auth: auth | nil, endpoint: String.t()}
 
   defstruct auth: nil, endpoint: "https://api.twitch.tv/helix/"
 
@@ -30,5 +30,4 @@ defmodule Twitch.Client do
   def new(auth = %{client_id: _, access_token: _}) do
     %__MODULE__{auth: auth}
   end
-
 end
