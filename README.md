@@ -1,5 +1,7 @@
 # Helix
 
+[![](https://github.com/eein/helix/workflows/Test/badge.svg)](https://github.com/eein/helix/actions)
+
 API Wrapper for the New Twitch API (Helix)
 
 ## Installation
