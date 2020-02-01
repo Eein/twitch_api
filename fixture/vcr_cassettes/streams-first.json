@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/streams?first=7"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"36809348768\",\"user_id\":\"26490481\",\"user_name\":\"summit1g\",\"game_id\":\"491931\",\"type\":\"live\",\"title\":\"WE GO AGANE [ @summit1g ]\",\"viewer_count\":34685,\"started_at\":\"2020-01-31T21:18:36Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_summit1g-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"36809493648\",\"user_id\":\"51496027\",\"user_name\":\"loltyler1\",\"game_id\":\"21779\",\"type\":\"live\",\"title\":\"FORCE WAY OUT GOLD ! NO PRISON ! BYE  ! !  UNRANKED TO CHALLENGER JUNGLE ONLY  !! \",\"viewer_count\":34168,\"started_at\":\"2020-01-31T21:40:16Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_loltyler1-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"565152257\",\"user_id\":\"121649330\",\"user_name\":\"Method\",\"game_id\":\"18122\",\"type\":\"live\",\"title\":\"🔴 LIVE NOW | RWF Ny'alotha | Day 4 | Falcone \\u0026 MrGM !giveaway\",\"viewer_count\":22724,\"started_at\":\"2020-01-31T05:31:29Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_method-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"36809434672\",\"user_id\":\"71092938\",\"user_name\":\"xQcOW\",\"game_id\":\"488552\",\"type\":\"live\",\"title\":\"JUICER - SLEEP RESETER STREAM \",\"viewer_count\":16533,\"started_at\":\"2020-01-31T21:31:35Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-{width}x{height}.jpg\",\"tag_ids\":[\"5fee8e79-7b4f-4515-ba39-82536b49a263\",\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\",\"ff56eeeb-99ed-4a60-93fc-0b3f05d8661e\",\"1eba3cfe-51cc-460a-8259-bc8bb987f904\"]},{\"id\":\"36811244288\",\"user_id\":\"163836275\",\"user_name\":\"Lord_Kebun\",\"game_id\":\"32982\",\"type\":\"live\",\"title\":\"Mr. Chang Gorilla Warfare | Twitter @LordKebun\",\"viewer_count\":12926,\"started_at\":\"2020-02-01T00:56:53Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_lord_kebun-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"36813438432\",\"user_id\":\"30104304\",\"user_name\":\"Maximilian_DOOD\",\"game_id\":\"2171\",\"type\":\"live\",\"title\":\"23 Years Of FFVII - CRISIS CORE Begins \\u0026 Remake Chat #postmates (1-31)\",\"viewer_count\":11234,\"started_at\":\"2020-02-01T04:14:29Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_maximilian_dood-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"36813676512\",\"user_id\":\"24538518\",\"user_name\":\"sneakylol\",\"game_id\":\"21779\",\"type\":\"live\",\"title\":\"lets get some wins\",\"viewer_count\":9739,\"started_at\":\"2020-02-01T04:39:40Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_sneakylol-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]}],\"pagination\":{\"cursor\":\"ZXlKeklqb3pORFk0TlM0eU1qTTNPVEUyTmpnME56VXNJbVFpT21aaGJITmxMQ0owSWpwMGNuVmxmUT09IGV5SnpJam81TnpNNUxqTTNOREkzTnpnMU56STRNeXdpWkNJNlptRnNjMlVzSW5RaU9uUnlkV1Y5\"}}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "2991",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "29",
+        "ratelimit-reset": "1580545680",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "c16b0c4dc731e9e2fb302117fc3b46a7",
+        "x-ctxlog-logid": "1-5e35368e-2b0f8cc7d48b567e7214ab9e",
+        "Date": "Sat, 01 Feb 2020 08:27:58 GMT",
+        "X-Served-By": "cache-sea4436-SEA, cache-bur17571-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580545678.012967,VS0,VS0,VE53",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

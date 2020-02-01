@@ -1,6 +1,5 @@
 defmodule Helix.Games do
   alias Helix.Client
-  alias Helix.Util.Params
 
   @moduledoc """
   Gets information about games and the streamers playing them on twitch
@@ -28,9 +27,7 @@ defmodule Helix.Games do
   """
 
   def get_top(client = %Helix.Client{}, params \\ %{}) do
-    path = "games/top"
-    url = Params.url_params_list_parser(path, params)
-    Client.get(client, url, [])
+    Client.get(client, "games/top", [], params)
   end
 
   @doc """
@@ -48,8 +45,6 @@ defmodule Helix.Games do
   """
 
   def get(client = %Helix.Client{}, params \\ %{}) do
-    path = "games"
-    url = Params.url_params_list_parser(path, params)
-    Client.get(client, url, [])
+    Client.get(client, "games", [], params)
   end
 end

@@ -1,4 +1,6 @@
 defmodule Helix.Client do
+  alias Helix.Util.Params
+
   @moduledoc """
   Builds the client for the API wrapper
   """
@@ -70,10 +72,11 @@ defmodule Helix.Client do
     end
   end
 
-  def get(client, path \\ "", headers \\ [], options \\ [])
+  def get(client, path \\ "", headers \\ [], params \\ {})
 
-  def get(client = %Helix.Client{}, path, headers, options) do
+  def get(client = %Helix.Client{}, path, headers, params) do
+    url = Params.url_params_list_parser(path, params)
     headers = [{"Client-ID", client.auth.client_id} | headers]
-    Helix.get!(path, headers, options)
+    Helix.get!(url, headers)
   end
 end
