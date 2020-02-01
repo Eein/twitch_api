@@ -24,6 +24,15 @@ TWITCH_CLIENT_SECRET=
 TWITCH_API_URL=
 ```
 
+You may also use config:
+
+```elixir
+config :helix,
+  client_id: System.get_env("TWITCH_CLIENT_ID"),
+  client_secret: System.get_env("TWITCH_CLIENT_SECRET"),
+  url: System.get_env("TWITCH_API_URL")
+```
+
 ## In Progress
 
 |  ?  | Resource            |	Endpoint                  |
@@ -37,8 +46,8 @@ TWITCH_API_URL=
 | [ ] | Entitlements        | Create Entitlement x      |
 | [ ] | Entitlements        | Get Code Status           |
 | [ ] | Entitlements        | Redeem Code               |
-| [ ] | Games               | Get Top Games             |
-| [ ] | Games               | Get Games                 |
+| [x] | Games               | Get Top Games             |
+| [x] | Games               | Get Games                 |
 | [ ] | Moderation          | Check Automod Status      |
 | [ ] | Moderation          | Get Banned Events         |
 | [ ] | Moderation          | Get Banned Users          |
