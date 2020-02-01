@@ -1,6 +1,6 @@
 # Helix
 
-[![](https://github.com/eein/helix/workflows/Test/badge.svg)](https://github.com/eein/helix/actions)
+![Elixir CI](https://github.com/eein/helix/workflows/Elixir%20CI/badge.svg)
 
 API Wrapper for the New Twitch API (Helix)
 
