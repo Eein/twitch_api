@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/users?login=dallas&login=LIRIK"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"44322889\",\"login\":\"dallas\",\"display_name\":\"dallas\",\"type\":\"\",\"broadcaster_type\":\"affiliate\",\"description\":\"Friendly, interactive, and very bald.\",\"profile_image_url\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/4d1f36cbf1f0072d-profile_image-300x300.png\",\"offline_image_url\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/51737668f60f7dcc-channel_offline_image-1920x1080.png\",\"view_count\":28055},{\"id\":\"23161357\",\"login\":\"lirik\",\"display_name\":\"LIRIK\",\"type\":\"\",\"broadcaster_type\":\"partner\",\"description\":\"Your source for a good time, hilarity, and gaming!\",\"profile_image_url\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/27fdad08-a2c2-4e0b-8983-448c39519643-profile_image-300x300.png\",\"offline_image_url\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/f3b9dc80-8f92-4b62-99e8-cf510d836417-channel_offline_image-1920x1080.jpeg\",\"view_count\":330517251}]}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "878",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "27",
+        "ratelimit-reset": "1580549224",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "685b390c791732c614305fe8c4437643",
+        "x-ctxlog-logid": "1-5e354462-264bff6a74cf8228de512f2d",
+        "Date": "Sat, 01 Feb 2020 09:26:58 GMT",
+        "X-Served-By": "cache-sea4471-SEA, cache-bur17535-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580549219.565958,VS0,VS0,VE47",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

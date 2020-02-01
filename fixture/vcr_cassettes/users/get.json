@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/users?id=44322889"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"44322889\",\"login\":\"dallas\",\"display_name\":\"dallas\",\"type\":\"\",\"broadcaster_type\":\"affiliate\",\"description\":\"Friendly, interactive, and very bald.\",\"profile_image_url\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/4d1f36cbf1f0072d-profile_image-300x300.png\",\"offline_image_url\":\"https://static-cdn.jtvnw.net/jtv_user_pictures/51737668f60f7dcc-channel_offline_image-1920x1080.png\",\"view_count\":28055}]}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "417",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "26",
+        "ratelimit-reset": "1580549226",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "a60a9d9e91dd187272e90bfa05683737",
+        "x-ctxlog-logid": "1-5e354463-cf869c41bed0584098ffc664",
+        "Date": "Sat, 01 Feb 2020 09:26:59 GMT",
+        "X-Served-By": "cache-sea4460-SEA, cache-bur17535-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580549219.464576,VS0,VS0,VE55",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

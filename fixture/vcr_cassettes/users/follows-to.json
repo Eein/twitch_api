@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/users/follows?to_id=23161357"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"total\":2542209,\"data\":[{\"from_id\":\"489549095\",\"from_name\":\"phatmos\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T09:07:13Z\"},{\"from_id\":\"487678190\",\"from_name\":\"savmp4\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T08:47:19Z\"},{\"from_id\":\"484826722\",\"from_name\":\"amendoin5\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T08:05:01Z\"},{\"from_id\":\"194142589\",\"from_name\":\"majaja0905\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T07:47:43Z\"},{\"from_id\":\"249416115\",\"from_name\":\"dangerzone307\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T06:51:21Z\"},{\"from_id\":\"489523057\",\"from_name\":\"biggestmikee\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T06:27:32Z\"},{\"from_id\":\"450797161\",\"from_name\":\"SRPIGGY556\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T06:13:07Z\"},{\"from_id\":\"489459031\",\"from_name\":\"watever1w4\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T05:27:23Z\"},{\"from_id\":\"196276042\",\"from_name\":\"whiisprr\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T05:26:44Z\"},{\"from_id\":\"489500922\",\"from_name\":\"goldforheals\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T05:04:22Z\"},{\"from_id\":\"489512011\",\"from_name\":\"Symec\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T04:57:00Z\"},{\"from_id\":\"489504049\",\"from_name\":\"streamersoup\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T03:44:24Z\"},{\"from_id\":\"170284978\",\"from_name\":\"maripug_25\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T01:52:05Z\"},{\"from_id\":\"145044122\",\"from_name\":\"match325\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T01:34:37Z\"},{\"from_id\":\"489485222\",\"from_name\":\"raingoeswoof\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T01:34:09Z\"},{\"from_id\":\"49396031\",\"from_name\":\"lanmisha\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T01:01:42Z\"},{\"from_id\":\"78725713\",\"from_name\":\"dnowja\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T00:07:13Z\"},{\"from_id\":\"427349503\",\"from_name\":\"mznxo\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T00:04:51Z\"},{\"from_id\":\"48525847\",\"from_name\":\"thegobem123\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T00:03:05Z\"},{\"from_id\":\"114534582\",\"from_name\":\"skotte13\",\"to_id\":\"23161357\",\"to_name\":\"LIRIK\",\"followed_at\":\"2020-02-01T00:02:30Z\"}],\"pagination\":{\"cursor\":\"eyJiIjpudWxsLCJhIjp7IkN1cnNvciI6IjE1ODA1MTUzNTA1MDQ0NjY1NTEifX0\"}}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "2555",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "28",
+        "ratelimit-reset": "1580549220",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "1b5cfc6e1933402115d98f955ced42d5",
+        "x-ctxlog-logid": "1-5e354460-5a065718bf09bc2b434d8427",
+        "Date": "Sat, 01 Feb 2020 09:26:56 GMT",
+        "X-Served-By": "cache-sea4463-SEA, cache-bur17535-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580549217.732095,VS0,VS0,VE78",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

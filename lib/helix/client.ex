@@ -72,7 +72,7 @@ defmodule Helix.Client do
     end
   end
 
-  def get(client, path \\ "", headers \\ [], params \\ {})
+  def get(client, path \\ "", headers \\ [], params \\ %{})
 
   def get(client = %Helix.Client{}, path, headers, params) do
     url = Params.url_params_list_parser(path, params)

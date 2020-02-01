@@ -19,7 +19,13 @@ defmodule Helix.StreamsTest do
   test "streams after request returns HTTP 200" do
     use_cassette "streams-after" do
       client = Helix.Client.new()
-      res = Helix.Streams.get(client, %{after: "ZXlKeklqb3pOVE16Tnk0eU1qTTNPVEUyTmpnME56VXNJbVFpT21aaGJITmxMQ0owSWpwMGNuVmxmUT09IGV5SnpJam8wTWpNekxqY3dPRFV3TnpFeU5UY3lOaXdpWkNJNlptRnNjMlVzSW5RaU9uUnlkV1Y5"})
+
+      res =
+        Helix.Streams.get(client, %{
+          after:
+            "ZXlKeklqb3pOVE16Tnk0eU1qTTNPVEUyTmpnME56VXNJbVFpT21aaGJITmxMQ0owSWpwMGNuVmxmUT09IGV5SnpJam8wTWpNekxqY3dPRFV3TnpFeU5UY3lOaXdpWkNJNlptRnNjMlVzSW5RaU9uUnlkV1Y5"
+        })
+
       data = res.body["data"]
       assert Enum.empty?(data) == false
       assert Enum.at(data, 0)["name"] != "League of Legends"

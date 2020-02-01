@@ -53,7 +53,7 @@ config :helix,
 | [ ] | Moderation          | Get Banned Users          |
 | [ ] | Moderation          | Get Moderators            |
 | [ ] | Moderation          | Get Moderator Events      |
-| [ ] | Streams             | Get Streams               |
+| [X] | Streams             | Get Streams               |
 | [ ] | Streams             | Get Streams Metadata      |
 | [ ] | Streams             | Create Stream Marker      |
 | [ ] | Streams             | Get Stream Markers        |
