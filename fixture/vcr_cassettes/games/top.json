@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/games/top"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"21779\",\"name\":\"League of Legends\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg\"},{\"id\":\"509658\",\"name\":\"Just Chatting\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Just%20Chatting-{width}x{height}.jpg\"},{\"id\":\"491931\",\"name\":\"Escape From Tarkov\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Escape%20From%20Tarkov-{width}x{height}.jpg\"},{\"id\":\"18122\",\"name\":\"World of Warcraft\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/World%20of%20Warcraft-{width}x{height}.jpg\"},{\"id\":\"33214\",\"name\":\"Fortnite\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-{width}x{height}.jpg\"},{\"id\":\"32982\",\"name\":\"Grand Theft Auto V\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg\"},{\"id\":\"29595\",\"name\":\"Dota 2\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Dota%202-{width}x{height}.jpg\"},{\"id\":\"488552\",\"name\":\"Overwatch\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Overwatch-{width}x{height}.jpg\"},{\"id\":\"493057\",\"name\":\"PLAYERUNKNOWN'S BATTLEGROUNDS\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-{width}x{height}.jpg\"},{\"id\":\"32399\",\"name\":\"Counter-Strike: Global Offensive\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/./Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg\"},{\"id\":\"138585\",\"name\":\"Hearthstone\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Hearthstone-{width}x{height}.jpg\"},{\"id\":\"511224\",\"name\":\"Apex Legends\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Apex%20Legends-{width}x{height}.jpg\"},{\"id\":\"12924\",\"name\":\"Warcraft III\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Warcraft%20III-{width}x{height}.jpg\"},{\"id\":\"491487\",\"name\":\"Dead by Daylight\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Dead%20by%20Daylight-{width}x{height}.jpg\"},{\"id\":\"460630\",\"name\":\"Tom Clancy's Rainbow Six: Siege\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/./Tom%20Clancy%27s%20Rainbow%20Six:%20Siege-{width}x{height}.jpg\"},{\"id\":\"511773\",\"name\":\"Boneworks\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Boneworks-{width}x{height}.jpg\"},{\"id\":\"2171\",\"name\":\"Crisis Core: Final Fantasy VII\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/./Crisis%20Core:%20Final%20Fantasy%20VII-{width}x{height}.jpg\"},{\"id\":\"512710\",\"name\":\"Call of Duty: Modern Warfare\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/./Call%20of%20Duty:%20Modern%20Warfare-{width}x{height}.jpg\"},{\"id\":\"27471\",\"name\":\"Minecraft\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Minecraft-{width}x{height}.jpg\"}],\"pagination\":{\"cursor\":\"eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9\"}}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "2761",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "28",
+        "ratelimit-reset": "1580543989",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "39626466b49086a311c19b49cf87ba0f",
+        "x-ctxlog-logid": "1-5e352ff1-39ed2105597583c24ae2edc5",
+        "Date": "Sat, 01 Feb 2020 07:59:45 GMT",
+        "X-Served-By": "cache-sea4452-SEA, cache-bur17521-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580543985.383399,VS0,VS0,VE61",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

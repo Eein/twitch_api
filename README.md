@@ -21,7 +21,7 @@ The `Helix.Client` may use environment variables to bootstrap with `new/0` other
 ```
 TWITCH_CLIENT_ID=
 TWITCH_CLIENT_SECRET=
-TWITCH_ENDPOINT=
+TWITCH_API_URL=
 ```
 
 ## In Progress

@@ -23,9 +23,9 @@ defmodule Helix.MixProject do
 
   defp deps do
     [
-      {:bypass, "~> 1.0", only: :test},
       {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.21", only: :dev, runtime: false},
+      {:exvcr, "~> 0.10", only: :test},
       {:httpoison, "~> 1.6"}
     ]
   end

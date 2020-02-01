@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/games?id=21779"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"21779\",\"name\":\"League of Legends\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg\"}]}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "151",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "29",
+        "ratelimit-reset": "1580543986",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "143d21615f90e2baa03a992c71324a0b",
+        "x-ctxlog-logid": "1-5e352ff0-c79db7f7f11810c5d01a6de0",
+        "Date": "Sat, 01 Feb 2020 07:59:44 GMT",
+        "X-Served-By": "cache-sea4443-SEA, cache-bur17521-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580543984.464643,VS0,VS0,VE43",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

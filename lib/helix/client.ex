@@ -11,43 +11,41 @@ defmodule Helix.Client do
   @typedoc """
   The client struct
   """
-  @type t :: %__MODULE__{auth: auth | nil, endpoint: String.t()}
+  @type t :: %__MODULE__{auth: auth | nil}
 
-  defstruct auth: nil, endpoint: "https://api.twitch.tv/helix/"
+  defstruct auth: nil
 
   @doc """
-  If using environment variables; takes /0 and returns a client
+  If using configuration; takes /0 and returns a client
 
   ## Examples
-      iex> System.put_env("TWITCH_CLIENT_ID", "ABC123")
-      iex> System.put_env("TWITCH_CLIENT_SECRET", "DEF456")
-      iex> Helix.Client.new()
-      %Helix.Client{
-        auth: %{client_id: "ABC123", client_secret: "DEF456"},
-        endpoint: "https://api.twitch.tv/helix/"
-      }
+  ```elixir
+  Helix.Client.new()
+  => %Helix.Client{
+    auth: %{client_id: "ABC123", client_secret: "DEF456"}
+  }
+  ```
   """
 
   @spec new() :: t
   def new do
     auth = %{
-      client_id: System.fetch_env!("TWITCH_CLIENT_ID"),
-      client_secret: System.fetch_env!("TWITCH_CLIENT_SECRET")
+      client_id: Application.fetch_env!(:helix, :client_id),
+      client_secret: Application.fetch_env!(:helix, :client_secret)
     }
 
     new(auth)
   end
 
   @doc """
-  Explicitly takes a client id and secret and returns a %Helix.Client{}.
+  Explicitly takes a client id and secret and returns a `%Helix.Client{}`.
   This is useful if you have many services that require different
   credentials, or if you are using elixir umbrellas.
 
   ## Examples
       iex> Helix.Client.new(%{client_id: "ABC123", client_secret: "DEF456"})
       %Helix.Client{
-        auth: %{client_id: "ABC123", client_secret: "DEF456"},
-        endpoint: "https://api.twitch.tv/helix/"
+        auth: %{client_id: "ABC123", client_secret: "DEF456"}
       }
   """
 
@@ -67,11 +65,15 @@ defmodule Helix.Client do
       {_, ""} ->
         raise ArgumentError, message: ":client_secret not set or is empty"
 
-      {id, secret} ->
-        case System.get_env("TWITCH_ENDPOINT") do
-          nil -> %__MODULE__{auth: auth}
-          endpoint -> %__MODULE__{auth: auth, endpoint: endpoint}
-        end
+      {_id, _secret} ->
+        %__MODULE__{auth: auth}
     end
+  end
+
+  def get(client, path \\ "", headers \\ [], options \\ [])
+
+  def get(client = %Helix.Client{}, path, headers, options) do
+    headers = [{"Client-ID", client.auth.client_id} | headers]
+    Helix.get!(path, headers, options)
   end
 end

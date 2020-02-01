@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/games/top?after=eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"29307\",\"name\":\"Path of Exile\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Path%20of%20Exile-{width}x{height}.jpg\"},{\"id\":\"498566\",\"name\":\"Slots\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Slots-{width}x{height}.jpg\"},{\"id\":\"512804\",\"name\":\"FIFA 20\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/FIFA%2020-{width}x{height}.jpg\"},{\"id\":\"26936\",\"name\":\"Music \\u0026 Performing Arts\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Music%20\\u0026%20Performing%20Arts-{width}x{height}.jpg\"},{\"id\":\"513143\",\"name\":\"Teamfight Tactics\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Teamfight%20Tactics-{width}x{height}.jpg\"},{\"id\":\"2692\",\"name\":\"Super Mario 64\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Super%20Mario%2064-{width}x{height}.jpg\"},{\"id\":\"504462\",\"name\":\"Call of Duty: Black Ops 4\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/./Call%20of%20Duty:%20Black%20Ops%204-{width}x{height}.jpg\"},{\"id\":\"490377\",\"name\":\"Sea of Thieves\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Sea%20of%20Thieves-{width}x{height}.jpg\"},{\"id\":\"509660\",\"name\":\"Art\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Art-{width}x{height}.jpg\"},{\"id\":\"2748\",\"name\":\"Magic: The Gathering\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/./Magic:%20The%20Gathering-{width}x{height}.jpg\"},{\"id\":\"510336\",\"name\":\"Temtem\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Temtem-{width}x{height}.jpg\"},{\"id\":\"505788\",\"name\":\"Monster Sanctuary\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Monster%20Sanctuary-{width}x{height}.jpg\"},{\"id\":\"497467\",\"name\":\"Monster Hunter World\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Monster%20Hunter%20World-{width}x{height}.jpg\"},{\"id\":\"369588\",\"name\":\"Mario Kart 8\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Mario%20Kart%208-{width}x{height}.jpg\"},{\"id\":\"497057\",\"name\":\"Destiny 2\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Destiny%202-{width}x{height}.jpg\"},{\"id\":\"490422\",\"name\":\"StarCraft II\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II-{width}x{height}.jpg\"},{\"id\":\"514790\",\"name\":\"Legends of Runeterra\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Legends%20of%20Runeterra-{width}x{height}.jpg\"},{\"id\":\"511195\",\"name\":\"Dragon Ball Z: Kakarot\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/./Dragon%20Ball%20Z:%20Kakarot-{width}x{height}.jpg\"},{\"id\":\"497437\",\"name\":\"The Evil Within 2\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/The%20Evil%20Within%202-{width}x{height}.jpg\"},{\"id\":\"497451\",\"name\":\"Pokémon Sword/Shield\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/Pok%C3%A9mon%20Sword/Shield-{width}x{height}.jpg\"}],\"pagination\":{\"cursor\":\"eyJzIjo0MCwiZCI6ZmFsc2UsInQiOnRydWV9\"}}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "2829",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "26",
+        "ratelimit-reset": "1580543995",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "fa23c2a59e54ea9b169b19062004c4dc",
+        "x-ctxlog-logid": "1-5e352ff3-b0de630f132eb09c8815ff63",
+        "Date": "Sat, 01 Feb 2020 07:59:48 GMT",
+        "X-Served-By": "cache-sea4437-SEA, cache-bur17521-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580543988.976900,VS0,VS0,VE54",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
