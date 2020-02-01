@@ -5,13 +5,14 @@ defmodule Helix.GamesTest do
 
   setup do
     ExVCR.Config.filter_request_headers("Client-ID")
-    :ok
+    HTTPoison.start
   end
 
   test "games/top request returns HTTP 200" do
     use_cassette "games/top" do
       client = Helix.Client.new()
       res = Helix.Games.get_top(client)
+      IO.inspect res
       assert Enum.empty?(res.body["data"]) == false
     end
   end

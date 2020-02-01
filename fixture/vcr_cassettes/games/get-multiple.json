@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Client-ID": "***"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.twitch.tv/helix/games?id=21779&id=493057"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"data\":[{\"id\":\"493057\",\"name\":\"PLAYERUNKNOWN'S BATTLEGROUNDS\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-{width}x{height}.jpg\"},{\"id\":\"21779\",\"name\":\"League of Legends\",\"box_art_url\":\"https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg\"}]}",
+      "headers": {
+        "Connection": "keep-alive",
+        "Content-Length": "317",
+        "access-control-allow-origin": "*",
+        "cache-control": "no-cache, no-store, must-revalidate, private",
+        "content-type": "application/json; charset=utf-8",
+        "expires": "0",
+        "pragma": "no-cache",
+        "ratelimit-limit": "30",
+        "ratelimit-remaining": "27",
+        "ratelimit-reset": "1580550722",
+        "server": "envoy",
+        "timing-allow-origin": "https://www.twitch.tv",
+        "twitch-trace-id": "eed451f193800e740a22be2c62dd882c",
+        "x-ctxlog-logid": "1-5e354a3d-c90cda409c745dc1865a7d7c",
+        "Date": "Sat, 01 Feb 2020 09:51:57 GMT",
+        "X-Served-By": "cache-sea4476-SEA, cache-bur17554-BUR",
+        "X-Cache": "MISS, MISS",
+        "X-Cache-Hits": "0, 0",
+        "X-Timer": "S1580550718.569028,VS0,VS0,VE52",
+        "Vary": "Accept-Encoding",
+        "Strict-Transport-Security": "max-age=300"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
