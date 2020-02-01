@@ -1,6 +1,4 @@
 defmodule Twitch.Client do
-  require Logger
-
   @moduledoc """
   Builds the client for the API wrapper
   """
@@ -31,7 +29,7 @@ defmodule Twitch.Client do
   """
 
   @spec new() :: t
-  def new() do
+  def new do
     auth = %{
       client_id: System.fetch_env!("TWITCH_CLIENT_ID"),
       client_secret: System.fetch_env!("TWITCH_CLIENT_SECRET")
@@ -57,10 +55,18 @@ defmodule Twitch.Client do
 
   def new(auth = %{client_id: id, client_secret: secret}) do
     case {id, secret} do
-      {nil, _} -> raise ArgumentError, message: ":client_id not set or is empty"
-      {_, nil} -> raise ArgumentError, message: ":client_secret not set or is empty"
-      {"", _} -> raise ArgumentError, message: ":client_id not set or is empty"
-      {_, ""} -> raise ArgumentError, message: ":client_secret not set or is empty"
+      {nil, _} ->
+        raise ArgumentError, message: ":client_id not set or is empty"
+
+      {_, nil} ->
+        raise ArgumentError, message: ":client_secret not set or is empty"
+
+      {"", _} ->
+        raise ArgumentError, message: ":client_id not set or is empty"
+
+      {_, ""} ->
+        raise ArgumentError, message: ":client_secret not set or is empty"
+
       {id, secret} ->
         case System.get_env("TWITCH_ENDPOINT") do
           nil -> %__MODULE__{auth: auth}
