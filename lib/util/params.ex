@@ -10,15 +10,16 @@ defmodule Helix.Util.Params do
 
   def url_params_list_parser(url, params) do
     if params !== %{} do
-      p = params
-      |> Enum.map(fn {k, v} ->
-        if is_list(v) do
-          params_list_query_stringify(k, v)
-        else
-          "#{k}=#{v}"
-        end
-      end)
-      |> Enum.join("&")
+      p =
+        params
+        |> Enum.map(fn {k, v} ->
+          if is_list(v) do
+            params_list_query_stringify(k, v)
+          else
+            "#{k}=#{v}"
+          end
+        end)
+        |> Enum.join("&")
 
       "#{url}?#{p}"
     else
