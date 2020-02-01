@@ -1,16 +1,16 @@
-defmodule Twitch.MixProject do
+defmodule Helix.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :twitch,
+      app: :helix,
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      name: "Twitch",
+      name: "Helix",
       docs: [
-        main: "Twitch"
+        main: "Helix"
       ]
     ]
   end

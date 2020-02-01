@@ -1,4 +1,4 @@
-defmodule Twitch.Client do
+defmodule Helix.Client do
   @moduledoc """
   Builds the client for the API wrapper
   """
@@ -21,8 +21,8 @@ defmodule Twitch.Client do
   ## Examples
       iex> System.put_env("TWITCH_CLIENT_ID", "ABC123")
       iex> System.put_env("TWITCH_CLIENT_SECRET", "DEF456")
-      iex> Twitch.Client.new()
-      %Twitch.Client{
+      iex> Helix.Client.new()
+      %Helix.Client{
         auth: %{client_id: "ABC123", client_secret: "DEF456"},
         endpoint: "https://api.twitch.tv/helix/"
       }
@@ -39,13 +39,13 @@ defmodule Twitch.Client do
   end
 
   @doc """
-  Explicitly takes a client id and secret and returns a client.
+  Explicitly takes a client id and secret and returns a %Helix.Client{}.
   This is useful if you have many services that require different
   credentials, or if you are using elixir umbrellas.
 
   ## Examples
-      iex> Twitch.Client.new(%{client_id: "ABC123", client_secret: "DEF456"})
-      %Twitch.Client{
+      iex> Helix.Client.new(%{client_id: "ABC123", client_secret: "DEF456"})
+      %Helix.Client{
         auth: %{client_id: "ABC123", client_secret: "DEF456"},
         endpoint: "https://api.twitch.tv/helix/"
       }
