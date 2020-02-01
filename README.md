@@ -1,6 +1,6 @@
 # Helix
 
-API Wrapper for the New Helix API (Helix)
+API Wrapper for the New Twitch API (Helix)
 
 ## Installation
 
