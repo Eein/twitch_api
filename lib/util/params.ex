@@ -1,5 +1,13 @@
 defmodule Helix.Util.Params do
   @moduledoc false
+
+  @doc """
+  Takes a list and converts it to a querystring. This exists because
+  HTTPoison *only* takes values for param keys and elixir maps cant
+  have the same key multiple times. This implementation allows lists
+  as the map key, converts them to url and passes them back *as* the url.
+  """
+
   def params_list_query_stringify(key, list) do
     Enum.with_index(list)
     |> Enum.map(fn {v, i} ->
