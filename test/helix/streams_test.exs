@@ -17,7 +17,7 @@ defmodule Helix.StreamsTest do
   end
 
   test "streams after request returns HTTP 200" do
-    use_cassette "streams-after" do
+    use_cassette "streams/get-after" do
       client = Helix.Client.new()
 
       res =
@@ -33,7 +33,7 @@ defmodule Helix.StreamsTest do
   end
 
   test "streams first request returns HTTP 200" do
-    use_cassette "streams-first" do
+    use_cassette "streams/get-first" do
       client = Helix.Client.new()
       res = Helix.Streams.get(client, %{first: 7})
       data = res.body["data"]
