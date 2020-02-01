@@ -8,8 +8,8 @@ jobs:
     - name: Setup elixir
       uses: actions/setup-elixir@v1
       env:
-        client_id: doesntmatter
-        client_secret: alsodoesntmatter
+        TWITCH_CLIENT_ID: doesntmatter
+        TWITCH_CLIENT_SECRET: alsodoesntmatter
       with:
         elixir-version: 1.10.0 # Define the elixir version [required]
         otp-version: 22.2 # Define the OTP version [required]
