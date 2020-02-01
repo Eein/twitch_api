@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build: '.'
+    env_file:
+      - '.env'
+    command: mix test
+    tty: true
+    volumes:
+      - ./:/app
+      - /app/deps
+      - /app/_build
