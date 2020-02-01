@@ -61,8 +61,8 @@ config :helix,
 | [ ] | Tags                | Get All Stream Tags       |
 | [ ] | Tags                | Get Stream Tags           |
 | [ ] | Tags                | Replace Stream Tags       |
-| [ ] | Users               | Get Users                 |
-| [ ] | Users               | Get Users Follows         |
+| [X] | Users               | Get Users                 |
+| [X] | Users               | Get Users Follows         |
 | [ ] | Users               | Update User               |
 | [ ] | Users               | Get User Extensions       |
 | [ ] | Users               | Update User Extensions    |
