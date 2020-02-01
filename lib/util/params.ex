@@ -9,8 +9,8 @@ defmodule Helix.Util.Params do
   """
 
   def params_list_query_stringify(key, list) do
-    Enum.with_index(list)
-    |> Enum.map(fn {v, i} ->
+    list
+    |> Enum.map(fn v ->
       "#{key}=#{v}"
     end)
     |> Enum.join("&")
