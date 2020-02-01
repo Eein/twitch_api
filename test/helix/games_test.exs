@@ -12,7 +12,6 @@ defmodule Helix.GamesTest do
     use_cassette "games/top" do
       client = Helix.Client.new()
       res = Helix.Games.get_top(client)
-      IO.inspect res
       assert Enum.empty?(res.body["data"]) == false
     end
   end
