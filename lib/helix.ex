@@ -7,7 +7,7 @@ defmodule Helix do
   API for the New Twitch API (Helix)
   """
 
-  def process_url(url) do
+  def process_request_url(url) do
     endpoint = Application.get_env(:helix, :url) || @endpoint
     endpoint <> "/helix/" <> url
   end

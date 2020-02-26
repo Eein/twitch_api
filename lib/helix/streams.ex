@@ -5,6 +5,8 @@ defmodule Helix.Streams do
   Gets information about streams on twitch
   """
 
+  @url "streams"
+
   @doc """
   Gets information about active streams. Streams are returned
   sorted by number of current viewers, in descending order.
@@ -38,6 +40,16 @@ defmodule Helix.Streams do
   ```
   """
   def get(client = %Helix.Client{}, params \\ %{}) do
-    Client.get(client, "streams", [], params)
+    Client.get(client, @url, [], params)
   end
+
+  @doc """
+  Gets the endpoint url for this resource
+
+  ## Examples
+    iex> Helix.Streams.url()
+    "https://api.twitch.tv/helix/streams"
+  """
+
+  def url(), do: Helix.process_request_url(@url)
 end

@@ -5,6 +5,8 @@ defmodule Helix.Users do
   Gets information about users on twitch
   """
 
+  @url "users"
+
   @doc """
   Gets information about one or more specified Twitch users.
   Users are identified by optional user IDs and/or login name.
@@ -45,35 +47,16 @@ defmodule Helix.Users do
   """
 
   def get(client = %Helix.Client{}, params \\ %{}) do
-    Client.get(client, "users", [], params)
+    Client.get(client, @url, [], params)
   end
 
   @doc """
-  Gets information on follow relationships between two Twitch users.
-  Information returned is sorted in order, most recent follow first.
-  This can return information like “who is lirik following,”
-  “who is following lirik,” or “is user X following user Y.”
-
-  [https://dev.twitch.tv/docs/api/reference#get-users-follows](https://dev.twitch.tv/docs/api/reference#get-users-follows)
+  Gets the endpoint url for this resource
 
   ## Examples
-  ```elixir
-  Helix.Users.get_follows(client, %{
-      to_id: 23161357
-    }
-  )
-  Helix.Users.get_follows(client, %{
-      from_id: 23161357
-    }
-  )
-  ```
+    iex> Helix.Users.url()
+    "https://api.twitch.tv/helix/users"
   """
 
-  def get_follows(client = %Helix.Client{}, params \\ %{}) do
-    if Map.has_key?(params, :to_id) or Map.has_key?(params, :from_id) do
-      Client.get(client, "users/follows", [], params)
-    else
-      raise "This endpoint requires from_id and/or to_id params to be valid"
-    end
-  end
+  def url(), do: Helix.process_request_url(@url)
 end
