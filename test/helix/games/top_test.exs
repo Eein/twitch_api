@@ -2,7 +2,7 @@ defmodule Helix.Games.TopTest do
   use ExUnit.Case, async: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-  alias Hex.Games.Top
+  alias Helix.Games.Top
 
   doctest Helix.Games.Top
 

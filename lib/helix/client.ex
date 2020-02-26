@@ -83,6 +83,7 @@ defmodule Helix.Client do
   def post(client, path \\ "", body \\ "", headers \\ [])
 
   def post(client = %Helix.Client{}, path, body, headers) do
+    url = Params.url_params_list_parser(path, %{})
     headers = [{"Client-ID", client.auth.client_id} | headers]
     Helix.post(url, body, headers)
   end
