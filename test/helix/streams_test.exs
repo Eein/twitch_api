@@ -5,7 +5,7 @@ defmodule Helix.StreamsTest do
 
   setup do
     ExVCR.Config.filter_request_headers("Client-ID")
-    HTTPoison.start
+    HTTPoison.start()
   end
 
   test "streams request returns HTTP 200" do

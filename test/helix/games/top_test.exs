@@ -5,7 +5,7 @@ defmodule Helix.Games.TopTest do
 
   setup do
     ExVCR.Config.filter_request_headers("Client-ID")
-    HTTPoison.start
+    HTTPoison.start()
   end
 
   test "games/top request returns HTTP 200" do

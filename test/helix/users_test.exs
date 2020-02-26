@@ -5,7 +5,7 @@ defmodule Helix.UsersTest do
 
   setup do
     ExVCR.Config.filter_request_headers("Client-ID")
-    HTTPoison.start
+    HTTPoison.start()
   end
 
   test "users request returns HTTP 200" do
