@@ -1,11 +1,11 @@
 defmodule Helix.Games.Top do
   alias Helix.Client
 
-  @url "games/top"
-
   @moduledoc """
   Gets information about games and the streamers playing them on twitch
   """
+
+  @url "games/top"
 
   @doc """
   Gets games sorted by number of current viewers on Twitch, most popular first.
