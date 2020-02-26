@@ -1,4 +1,4 @@
-defmodule Helix.Webhook do
+defmodule Helix.Webhooks.Hub do
   alias Helix.Client
 
   @moduledoc """
