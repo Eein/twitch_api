@@ -12,6 +12,10 @@ defmodule Helix do
     endpoint <> "/helix/" <> url
   end
 
+  def process_request_headers(headers) do
+    [{"Content-Type", "application/json"} | headers]
+  end
+
   def process_response_body(body) do
     body
     |> Jason.decode!()
