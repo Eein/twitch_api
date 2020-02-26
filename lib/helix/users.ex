@@ -58,5 +58,5 @@ defmodule Helix.Users do
     "https://api.twitch.tv/helix/users"
   """
 
-  def url(), do: Helix.process_request_url(@url)
+  def url, do: Helix.process_request_url(@url)
 end

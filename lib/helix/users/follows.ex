@@ -44,5 +44,5 @@ defmodule Helix.Users.Follows do
     "https://api.twitch.tv/helix/users/follows"
   """
 
-  def url(), do: Helix.process_request_url(@url)
+  def url, do: Helix.process_request_url(@url)
 end

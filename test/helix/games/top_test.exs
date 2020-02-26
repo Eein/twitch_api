@@ -1,6 +1,9 @@
 defmodule Helix.Games.TopTest do
   use ExUnit.Case, async: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
+
+  alias Hex.Games.Top
+
   doctest Helix.Games.Top
 
   setup do
@@ -11,7 +14,7 @@ defmodule Helix.Games.TopTest do
   test "games/top request returns HTTP 200" do
     use_cassette "games/top" do
       client = Helix.Client.new()
-      res = Helix.Games.Top.get(client)
+      res = Top.get(client)
       assert Enum.empty?(res.body["data"]) == false
     end
   end
@@ -19,7 +22,7 @@ defmodule Helix.Games.TopTest do
   test "games/top after request returns HTTP 200" do
     use_cassette "games/top-after" do
       client = Helix.Client.new()
-      res = Helix.Games.Top.get(client, %{after: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"})
+      res = Top.get(client, %{after: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"})
       data = res.body["data"]
       assert Enum.empty?(data) == false
       assert Enum.at(data, 0)["name"] != "League of Legends"
@@ -29,7 +32,7 @@ defmodule Helix.Games.TopTest do
   test "games/top first request returns HTTP 200" do
     use_cassette "games/top-first" do
       client = Helix.Client.new()
-      res = Helix.Games.Top.get(client, %{first: 7})
+      res = Top.get(client, %{first: 7})
       data = res.body["data"]
       assert Enum.empty?(data) == false
       assert Enum.count(data) == 7

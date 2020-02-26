@@ -51,5 +51,5 @@ defmodule Helix.Streams do
     "https://api.twitch.tv/helix/streams"
   """
 
-  def url(), do: Helix.process_request_url(@url)
+  def url, do: Helix.process_request_url(@url)
 end

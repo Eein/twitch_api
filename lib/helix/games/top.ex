@@ -2,7 +2,7 @@ defmodule Helix.Games.Top do
   alias Helix.Client
 
   @moduledoc """
-  Gets information about games and the streamers playing them on twitch
+  Gets information about the top games and the streamers playing them on twitch
   """
 
   @url "games/top"
@@ -40,5 +40,5 @@ defmodule Helix.Games.Top do
     "https://api.twitch.tv/helix/games/top"
   """
 
-  def url(), do: Helix.process_request_url(@url)
+  def url, do: Helix.process_request_url(@url)
 end
