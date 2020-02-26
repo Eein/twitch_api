@@ -41,6 +41,10 @@ config :helix,
 
 ## In Progress
 
+`x` is complete
+
+`-` is in progress or needs tests
+
 |  ?  | Resource            |	Endpoint                  |
 | --- | ------------------- | ------------------------- |
 | [ ] | Analytics           | Extension Analytics       |
@@ -73,7 +77,7 @@ config :helix,
 | [ ] | Users               | Get User Extensions       |
 | [ ] | Users               | Update User Extensions    |
 | [ ] | Videos              | Get Videos                |
-| [ ] | Webhooks            | Get Webhook Subscriptions |
+| [-] | Webhooks            | Get Webhook Subscriptions |
 
 ## Webhooks - In Progress
 
