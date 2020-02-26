@@ -4,6 +4,10 @@
 
 API Wrapper for the New Twitch API (Helix)
 
+This package is *NOT* ready for production.
+
+If you decide to use this, ensure you pull from the specific commit hash that works for your application; I'll be updating master quite frequently with breaking changes.
+
 ## Installation
 
 Not available in hex (yet)
@@ -70,6 +74,13 @@ config :helix,
 | [ ] | Users               | Update User Extensions    |
 | [ ] | Videos              | Get Videos                |
 | [ ] | Webhooks            | Get Webhook Subscriptions |
+
+## Webhooks - In Progress
+
+|  ?  | Resource            |	Endpoint                  |
+| --- | ------------------- | ------------------------- |
+| [-] | Hub                 | Subscribe                 |
+| [-] | Hub                 | Unsubscribe               |
 
 
 ## Docs
