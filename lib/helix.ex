@@ -13,7 +13,10 @@ defmodule Helix do
   end
 
   def process_request_headers(headers) do
-    [{"Content-Type", "application/json"} | headers]
+    [
+      {"Content-Type", "application/json"},
+      {"Client-ID", Application.get_env(:helix, :client_id)}
+    ] ++ headers
   end
 
   def process_response_body(body) do
