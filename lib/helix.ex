@@ -9,7 +9,7 @@ defmodule Helix do
 
   def process_request_url(url) do
     endpoint = Application.get_env(:helix, :url) || @endpoint
-    endpoint <> url
+    "#{endpoint}/#{url}"
   end
 
   def process_request_headers(headers) do
