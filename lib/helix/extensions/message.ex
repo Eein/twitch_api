@@ -27,8 +27,8 @@ defmodule Helix.Extensions.Message do
   ```
   """
 
-  def post(client = %Helix.Client{}, body) do
-    Client.post(client, @url, [], params)
+  def post(client = %Helix.Client{}, body \\ "", params \\ []) do
+    Client.post(client, @url, body, params)
   end
 
   @doc """
