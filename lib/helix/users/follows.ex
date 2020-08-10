@@ -5,7 +5,7 @@ defmodule Helix.Users.Follows do
   Gets information about users following on twitch
   """
 
-  @url "users/follows"
+  @url "helix/users/follows"
 
   @doc """
   Gets information on follow relationships between two Twitch users.

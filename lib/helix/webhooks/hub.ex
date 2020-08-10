@@ -5,7 +5,7 @@ defmodule Helix.Webhooks.Hub do
   Handles subscription and unsubscription to twitch webhooks hub
   """
 
-  @url "webhooks/hub"
+  @url "helix/webhooks/hub"
 
   def subscribe(client, callback, resource, lease \\ 864_000) do
     Client.post(client, @url, [], %{

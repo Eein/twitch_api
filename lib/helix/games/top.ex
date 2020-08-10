@@ -5,7 +5,7 @@ defmodule Helix.Games.Top do
   Gets information about the top games and the streamers playing them on twitch
   """
 
-  @url "games/top"
+  @url "helix/games/top"
 
   @doc """
   Gets games sorted by number of current viewers on Twitch, most popular first.

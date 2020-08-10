@@ -5,7 +5,7 @@ defmodule Helix.Users do
   Gets information about users on twitch
   """
 
-  @url "users"
+  @url "helix/users"
 
   @doc """
   Gets information about one or more specified Twitch users.

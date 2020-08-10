@@ -5,7 +5,7 @@ defmodule Helix.Webhooks.Subscriptions do
   Gets the Webhook subscriptions of a user identified by a Bearer token.
   """
 
-  @url "webhooks/subscriptions"
+  @url "helix/webhooks/subscriptions"
 
   @doc """
   Gets information about subscribed webhooks.

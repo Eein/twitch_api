@@ -5,7 +5,7 @@ defmodule Helix.Games do
   Gets information about games and the streamers playing them on twitch
   """
 
-  @url "games"
+  @url "helix/games"
 
   @doc """
   Gets game information by game ID or name.

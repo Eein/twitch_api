@@ -5,7 +5,7 @@ defmodule Helix.Streams do
   Gets information about streams on twitch
   """
 
-  @url "streams"
+  @url "helix/streams"
 
   @doc """
   Gets information about active streams. Streams are returned
