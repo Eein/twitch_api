@@ -34,24 +34,26 @@ The default API's are:
 The `TwitchApi.Client` may use environment variables to bootstrap with `new/0` otherwise defaults will be used. See the following environment variables:
 
 ```
-TWITCH_CLIENT_ID=
-TWITCH_CLIENT_SECRET=
-TWITCH_EXTENSION_CLIENT_ID=
-TWITCH_EXTENSION_CLIENT_SECRET=
-TWITCH_HELIX_API_ENDPOINT=
-TWITCH_EXTENSION_API_ENDPOINT=
-TWITCH_ID_API_ENDPOINT=
+TWITCH_API_CLIENT_ID=
+TWITCH_API_CLIENT_SECRET=
+TWITCH_API_EXTENSION_CLIENT_ID=
+TWITCH_API_EXTENSION_CLIENT_SECRET=
+TWITCH_API_HELIX_ENDPOINT=
+TWITCH_API_EXTENSION_ENDPOINT=
+TWITCH_API_ID_ENDPOINT=
 ```
 
 You may also use config:
 
 ```elixir
 config :twitch_api,
-  client_id: System.get_env("TWITCH_CLIENT_ID"),
-  client_secret: System.get_env("TWITCH_CLIENT_SECRET"),
-  extension_client_id: System.get_env("TWITCH_EXTENSION_CLIENT_ID"),
-  extension_client_secret: System.get_env("TWITCH_EXTENSION_CLIENT_SECRET"),
-  url: System.get_env("TWITCH_API_URL")
+  client_id: System.get_env("TWITCH_API_CLIENT_ID"),
+  client_secret: System.get_env("TWITCH_API_CLIENT_SECRET"),
+  extension_client_id: System.get_env("TWITCH_API_EXTENSION_CLIENT_ID"),
+  extension_client_secret: System.get_env("TWITCH_API_EXTENSION_CLIENT_SECRET"),
+  id_endpoint: System.get_env("TWITCH_API_ID_ENDPOINT"),
+  helix_endpoint: System.get_env("TWITCH_API_HELIX_ENDPOINT"),
+  extension_endpoint: System.get_env("TWITCH_API_EXTENSION_ENDPOINT")
 ```
 
 ## In Progress
@@ -59,6 +61,8 @@ config :twitch_api,
 `x` is complete
 
 `-` is in progress or needs tests
+
+### HELIX
 
 |  ?  | Resource            |	Endpoint                  |
 | --- | ------------------- | ------------------------- |
@@ -93,6 +97,12 @@ config :twitch_api,
 | [ ] | Users               | Update User Extensions    |
 | [ ] | Videos              | Get Videos                |
 | [-] | Webhooks            | Get Webhook Subscriptions |
+
+### ID/OAuth
+
+|  ?  | Resource            |	Endpoint                  |
+| --- | ------------------- | ------------------------- |
+| [X] | Token               | oauth2/token              |
 
 ## Webhooks - In Progress
 
