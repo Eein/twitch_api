@@ -1,11 +1,11 @@
-defmodule Helix.Streams do
-  alias Helix.Client
+defmodule TwitchApi.Helix.Streams do
+  alias TwitchApi.Client
 
   @moduledoc """
   Gets information about streams on twitch
   """
 
-  @url "helix/streams"
+  @path "streams"
 
   @doc """
   Gets information about active streams. Streams are returned
@@ -15,13 +15,13 @@ defmodule Helix.Streams do
 
   ## Examples
   ```elixir
-  Helix.Streams.get(client)
-  Helix.Streams.get(client, %{
+  TwitchApi.Helix.Streams.get(client)
+  TwitchApi.Helix.Streams.get(client, %{
       first: 25,
       before: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"
     }
   )
-  Helix.Streams.get(client, %{
+  TwitchApi.Helix.Streams.get(client, %{
       after: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"
     }
   )
@@ -33,23 +33,23 @@ defmodule Helix.Streams do
 
   ## Examples
   ```elixir
-  Helix.Streams.get(client, %{
+  TwitchApi.Helix.Streams.get(client, %{
       id: [123, 342, 929, 100]
     }
   )
   ```
   """
-  def get(client = %Helix.Client{}, params \\ %{}) do
-    Client.get(client, @url, [], params)
+  def get(client = %TwitchApi.Client{}, params \\ %{}) do
+    Client.get(client, url(), [], params)
   end
 
   @doc """
   Gets the endpoint url for this resource
 
   ## Examples
-    iex> Helix.Streams.url()
+    iex> TwitchApi.Helix.Streams.url()
     "https://api.twitch.tv/helix/streams"
   """
 
-  def url, do: Helix.process_request_url(@url)
+  def url, do: TwitchApi.Helix.url(@path)
 end

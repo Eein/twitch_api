@@ -14,6 +14,6 @@ jobs:
       run: mix deps.get
     - name: Run Tests
       env:
-        TWITCH_CLIENT_ID: doesntmatter
-        TWITCH_CLIENT_SECRET: alsodoesntmatter
+        TWITCH_API_CLIENT_ID: ${{ secrets.TWITCH_API_CLIENT_ID }}
+        TWITCH_API_CLIENT_SECRET: ${{ secrets.TWITCH_API_CLIENT_SECRET }}
       run: mix test

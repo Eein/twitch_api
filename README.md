@@ -1,8 +1,8 @@
-# Helix
+# TwitchApi
 
-[![Tests](https://github.com/eein/helix/workflows/Tests/badge.svg)](https://github.com/Eein/helix/actions)
+[![Tests](https://github.com/eein/twitch_api/workflows/Tests/badge.svg)](https://github.com/Eein/twitch_api/actions)
 
-API Wrapper for the New Twitch API (Helix)
+API Wrapper for the New Twitch API (TwitchApi)
 
 This package is *NOT* ready for production.
 
@@ -15,28 +15,47 @@ Not available in hex (yet)
 ```elixir
 def deps do
   [
-    {:helix, "~> 0.1.0"}
+    {:twitch_api, "~> 0.1.0"}
   ]
 end
 ```
 
+## Description
+
+The Twitch Api has a few API's that have their own requirements - this package handles all of them in isolation with the same client.
+
+The default API's are:
+- https://api.twitch.tv/helix
+- https://api.twitch.tv/extensions
+- https://id.twitch.tv
+
 ## Environment Variables
 
-The `Helix.Client` may use environment variables to bootstrap with `new/0` otherwise defaults will be used. See the following environment variables:
+The `TwitchApi.Client` may use environment variables to bootstrap with `new/0` otherwise defaults will be used. See the following environment variables:
 
 ```
-TWITCH_CLIENT_ID=
-TWITCH_CLIENT_SECRET=
-TWITCH_API_URL=
+TWITCH_API_CLIENT_ID=
+TWITCH_API_CLIENT_SECRET=
+TWITCH_API_EXTENSION_CLIENT_ID=
+TWITCH_API_EXTENSION_CLIENT_SECRET=
+TWITCH_API_HELIX_ENDPOINT=
+TWITCH_API_EXTENSION_ENDPOINT=
+TWITCH_API_ID_ENDPOINT=
+TWITCH_API_HELIX_WEBHOOK_CALLBACK_URL=
 ```
 
 You may also use config:
 
 ```elixir
-config :helix,
-  client_id: System.get_env("TWITCH_CLIENT_ID"),
-  client_secret: System.get_env("TWITCH_CLIENT_SECRET"),
-  url: System.get_env("TWITCH_API_URL")
+config :twitch_api,
+  client_id: System.get_env("TWITCH_API_CLIENT_ID"),
+  client_secret: System.get_env("TWITCH_API_CLIENT_SECRET"),
+  extension_client_id: System.get_env("TWITCH_API_EXTENSION_CLIENT_ID"),
+  extension_client_secret: System.get_env("TWITCH_API_EXTENSION_CLIENT_SECRET"),
+  id_endpoint: System.get_env("TWITCH_API_ID_ENDPOINT"),
+  helix_endpoint: System.get_env("TWITCH_API_HELIX_ENDPOINT"),
+  extension_endpoint: System.get_env("TWITCH_API_EXTENSION_ENDPOINT"),
+  webhook_callback_url: System.get_env("TWITCH_API_HELIX_WEBHOOK_CALLBACK_URL", nil)
 ```
 
 ## In Progress
@@ -44,6 +63,8 @@ config :helix,
 `x` is complete
 
 `-` is in progress or needs tests
+
+### HELIX
 
 |  ?  | Resource            |	Endpoint                  |
 | --- | ------------------- | ------------------------- |
@@ -79,6 +100,12 @@ config :helix,
 | [ ] | Videos              | Get Videos                |
 | [-] | Webhooks            | Get Webhook Subscriptions |
 
+### ID/OAuth
+
+|  ?  | Resource            |	Endpoint                  |
+| --- | ------------------- | ------------------------- |
+| [X] | Token               | oauth2/token              |
+
 ## Webhooks - In Progress
 
 |  ?  | Resource            |	Endpoint                  |
@@ -91,4 +118,4 @@ config :helix,
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/helix](https://hexdocs.pm/helix).
+be found at [https://hexdocs.pm/twitch_api](https://hexdocs.pm/twitch_api).

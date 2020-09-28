@@ -3,7 +3,9 @@
     "request": {
       "body": "",
       "headers": {
-        "Client-ID": "***"
+        "Content-Type": "application/json",
+        "Client-ID": "***",
+        "Authorization": "***"
       },
       "method": "get",
       "options": [],
@@ -12,29 +14,28 @@
     },
     "response": {
       "binary": false,
-      "body": "{\"data\":[{\"id\":\"37017034160\",\"user_id\":\"26490481\",\"user_name\":\"summit1g\",\"game_id\":\"491931\",\"type\":\"live\",\"title\":\"EFT tourney. 1 hour late to the party. 2 min delay [ @summit1g ]\",\"viewer_count\":35086,\"started_at\":\"2020-02-25T21:05:56Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_summit1g-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"37016091920\",\"user_id\":\"51496027\",\"user_name\":\"loltyler1\",\"game_id\":\"21779\",\"type\":\"live\",\"title\":\"BE NICE ALL AND ALL MANY :) HAPPY NICENESS :) !\",\"viewer_count\":31702,\"started_at\":\"2020-02-25T16:40:21Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_loltyler1-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"719649041\",\"user_id\":\"106013742\",\"user_name\":\"Pestily\",\"game_id\":\"491931\",\"type\":\"live\",\"title\":\"BIGGEST GIVEAWAY EVER! - Come support Starlight! !starlight !starlightfaq !scoreboard\",\"viewer_count\":26054,\"started_at\":\"2020-02-25T23:39:09Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_pestily-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\",\"8282259b-a997-4c63-b908-24027f64ac9a\",\"cea7bc0c-75a5-4446-8743-6db031b71550\"]},{\"id\":\"37016959120\",\"user_id\":\"71092938\",\"user_name\":\"xQcOW\",\"game_id\":\"27471\",\"type\":\"live\",\"title\":\"BEST GAMER TO WALK THE EARTH HOLY SHUTUTYHUIUTHUIIUH OMGG ITS HIM AHWTF!!@!!!@@@@@@@@!!111!ONEONEONEONE!!Q1111\\n\",\"viewer_count\":25406,\"started_at\":\"2020-02-25T20:49:56Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\",\"1eba3cfe-51cc-460a-8259-bc8bb987f904\",\"ff56eeeb-99ed-4a60-93fc-0b3f05d8661e\"]},{\"id\":\"37017130064\",\"user_id\":\"40197643\",\"user_name\":\"RajjPatel\",\"game_id\":\"509658\",\"type\":\"live\",\"title\":\"THE RAJJCHELOR FT YASSUO \\u0026 10 GIRLS | TWITTER @RAJJOFFICIAL\",\"viewer_count\":24941,\"started_at\":\"2020-02-25T21:26:28Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_rajjpatel-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"37016543840\",\"user_id\":\"17337557\",\"user_name\":\"DrDisrespect\",\"game_id\":\"491931\",\"type\":\"live\",\"title\":\"$10,000 Code Red Escape from Tarkov Tournament | @DrDisrespect\",\"viewer_count\":23659,\"started_at\":\"2020-02-25T19:01:34Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_drdisrespect-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"37016696176\",\"user_id\":\"179205395\",\"user_name\":\"BoomTV\",\"game_id\":\"491931\",\"type\":\"live\",\"title\":\"CAST for Code Red Tarkov | View Scoreboard @ https://boom.tv/codered | Drops @ 6-7pm PT\",\"viewer_count\":22384,\"started_at\":\"2020-02-25T19:45:41Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_boomtv-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]}],\"pagination\":{\"cursor\":\"ZXlKeklqb3pOVEE0Tmk0eU1qTTNPVEUyTmpnME56VXNJbVFpT21aaGJITmxMQ0owSWpwMGNuVmxmUT09IGV5SnpJam95TWpNNE5DNHhORGc0TkRrMk16ZzVOellzSW1RaU9tWmhiSE5sTENKMElqcDBjblZsZlE9PQ\"}}",
+      "body": "{\"data\":[{\"id\":\"702859138\",\"user_id\":\"83232866\",\"user_name\":\"ibai\",\"game_id\":\"510218\",\"type\":\"live\",\"title\":\"😎😎 AMONG US CON CAMS 😎😎\",\"viewer_count\":87484,\"started_at\":\"2020-09-28T16:53:43Z\",\"language\":\"es\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_ibai-{width}x{height}.jpg\",\"tag_ids\":[\"d4bb9c58-2141-4881-bcdc-3fe0505457d1\"]},{\"id\":\"39535269212\",\"user_id\":\"39276140\",\"user_name\":\"Rubius\",\"game_id\":\"71375\",\"type\":\"live\",\"title\":\"ESCAPANDO DE LATINOAMERICA AL ESPACIO CON MI NAVE DE 1000000 EUROS PogU\",\"viewer_count\":61259,\"started_at\":\"2020-09-28T19:13:00Z\",\"language\":\"es\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_rubius-{width}x{height}.jpg\",\"tag_ids\":[\"d4bb9c58-2141-4881-bcdc-3fe0505457d1\"]},{\"id\":\"39889210590\",\"user_id\":\"71092938\",\"user_name\":\"xQcOW\",\"game_id\":\"27471\",\"type\":\"live\",\"title\":\"BEST PLAYER WORLD\",\"viewer_count\":46608,\"started_at\":\"2020-09-28T21:04:12Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\",\"e6bb8b34-4c28-4b5f-94ed-12c1ebf2d0e4\"]},{\"id\":\"703577506\",\"user_id\":\"48878319\",\"user_name\":\"TheGrefg\",\"game_id\":\"510218\",\"type\":\"live\",\"title\":\"😳 AMONG US COMO NUNCA ANTES LO HAS VISTO 😳\",\"viewer_count\":41455,\"started_at\":\"2020-09-28T19:30:52Z\",\"language\":\"es\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_thegrefg-{width}x{height}.jpg\",\"tag_ids\":[\"d4bb9c58-2141-4881-bcdc-3fe0505457d1\"]},{\"id\":\"2695348433\",\"user_id\":\"233300375\",\"user_name\":\"Clix\",\"game_id\":\"33214\",\"type\":\"live\",\"title\":\"$5k BFC Zonewar Tournament w Dubs \\u0026 Yuldy | !bracket | NRG CLIX\",\"viewer_count\":37260,\"started_at\":\"2020-09-28T21:09:15Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_clix-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]},{\"id\":\"39886849422\",\"user_id\":\"26301881\",\"user_name\":\"sodapoppin\",\"game_id\":\"518184\",\"type\":\"live\",\"title\":\"Uh herro\",\"viewer_count\":35412,\"started_at\":\"2020-09-28T15:33:35Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_sodapoppin-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\",\"2a14b52e-d459-4c92-be11-5d86b898f6b6\"]},{\"id\":\"39888200846\",\"user_id\":\"51496027\",\"user_name\":\"loltyler1\",\"game_id\":\"21779\",\"type\":\"live\",\"title\":\"UNSTOPPABLE BEAST OF MAN 6'5 POWER HOUSE MACHINE !! DIFFERENT BUILT !!\",\"viewer_count\":33005,\"started_at\":\"2020-09-28T19:12:52Z\",\"language\":\"en\",\"thumbnail_url\":\"https://static-cdn.jtvnw.net/previews-ttv/live_user_loltyler1-{width}x{height}.jpg\",\"tag_ids\":[\"6ea6bca4-4712-4ab9-a906-e3336a9d8039\"]}],\"pagination\":{\"cursor\":\"eyJiIjp7IkN1cnNvciI6ImV5SnpJam80TnpRNE5DNDBORFUzTkRZME5qWTROU3dpWkNJNlptRnNjMlVzSW5RaU9uUnlkV1Y5In0sImEiOnsiQ3Vyc29yIjoiZXlKeklqb3pNekF3TlM0eE5UVTBPVFF3TXpjeE9EWXNJbVFpT21aaGJITmxMQ0owSWpwMGNuVmxmUT09In19\"}}",
       "headers": {
         "Connection": "keep-alive",
-        "Content-Length": "3205",
-        "access-control-allow-origin": "*",
-        "cache-control": "no-cache, no-store, must-revalidate, private",
-        "content-type": "application/json; charset=utf-8",
-        "expires": "0",
-        "pragma": "no-cache",
-        "ratelimit-limit": "30",
-        "ratelimit-remaining": "29",
-        "ratelimit-reset": "1582675691",
-        "server": "envoy",
-        "timing-allow-origin": "https://www.twitch.tv",
-        "twitch-trace-id": "b376f1127f4ca58e5ba9612c0a268acc",
-        "x-ctxlog-logid": "1-5e55b6e9-1f515d5dddafbb03a2127e46",
-        "Date": "Wed, 26 Feb 2020 00:08:09 GMT",
-        "X-Served-By": "cache-sea4423-SEA, cache-bur17549-BUR",
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "no-cache, no-store, must-revalidate, private",
+        "Expires": "0",
+        "Pragma": "no-cache",
+        "Ratelimit-Limit": "800",
+        "Ratelimit-Remaining": "799",
+        "Ratelimit-Reset": "1601332265",
+        "Timing-Allow-Origin": "https://www.twitch.tv",
+        "Twitch-Trace-Id": "e2f8caf2c8d54ea14140515a6e9bb89a",
+        "X-Ctxlog-Logid": "1-5f726428-76db36fc7d61ca2512459b9e",
+        "Date": "Mon, 28 Sep 2020 22:31:04 GMT",
+        "X-Served-By": "cache-sea4466-SEA, cache-bur17572-BUR",
         "X-Cache": "MISS, MISS",
         "X-Cache-Hits": "0, 0",
-        "X-Timer": "S1582675689.317929,VS0,VS0,VE49",
+        "X-Timer": "S1601332265.927930,VS0,VS0,VE53",
         "Vary": "Accept-Encoding",
-        "Strict-Transport-Security": "max-age=300"
+        "Strict-Transport-Security": "max-age=300",
+        "transfer-encoding": "chunked"
       },
       "status_code": 200,
       "type": "ok"

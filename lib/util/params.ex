@@ -1,4 +1,4 @@
-defmodule Helix.Util.Params do
+defmodule TwitchApi.Util.Params do
   @moduledoc false
 
   @doc """

@@ -1,11 +1,11 @@
-defmodule Helix.Users do
-  alias Helix.Client
+defmodule TwitchApi.Helix.Users do
+  alias TwitchApi.Client
 
   @moduledoc """
   Gets information about users on twitch
   """
 
-  @url "helix/users"
+  @path "users"
 
   @doc """
   Gets information about one or more specified Twitch users.
@@ -17,13 +17,13 @@ defmodule Helix.Users do
 
   ## Examples
   ```elixir
-  Helix.Users.get(client)
-  Helix.Users.get(client, %{
+  TwitchApi.Helix.Users.get(client)
+  TwitchApi.Helix.Users.get(client, %{
       first: 25,
       before: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"
     }
   )
-  Helix.Users.get(client, %{
+  TwitchApi.Helix.Users.get(client, %{
       after: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"
     }
   )
@@ -35,28 +35,28 @@ defmodule Helix.Users do
 
   ## Examples
   ```elixir
-  Helix.Users.get(client, %{
+  TwitchApi.Helix.Users.get(client, %{
       id: [123, 342, 929, 100]
     }
   )
-  Helix.Users.get(client, %{
+  TwitchApi.Helix.Users.get(client, %{
       login: ["kappa", "ted", "bobross"]
     }
   )
   ```
   """
 
-  def get(client = %Helix.Client{}, params \\ %{}) do
-    Client.get(client, @url, [], params)
+  def get(client = %TwitchApi.Client{}, params \\ %{}) do
+    Client.get(client, url(), [], params)
   end
 
   @doc """
   Gets the endpoint url for this resource
 
   ## Examples
-    iex> Helix.Users.url()
+    iex> TwitchApi.Helix.Users.url()
     "https://api.twitch.tv/helix/users"
   """
 
-  def url, do: Helix.process_request_url(@url)
+  def url, do: TwitchApi.Helix.url(@path)
 end

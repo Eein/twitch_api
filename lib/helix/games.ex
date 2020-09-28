@@ -1,11 +1,11 @@
-defmodule Helix.Games do
-  alias Helix.Client
+defmodule TwitchApi.Helix.Games do
+  alias TwitchApi.Client
 
   @moduledoc """
   Gets information about games and the streamers playing them on twitch
   """
 
-  @url "helix/games"
+  @path "games"
 
   @doc """
   Gets game information by game ID or name.
@@ -14,9 +14,9 @@ defmodule Helix.Games do
 
   ## Examples
   ```elixir
-  Helix.Games.get(client)
-  Helix.Games.get(client, %{id: 21779})
-  Helix.Games.get(client, %{id: [21779, 493057]})
+  TwitchApi.Helix.Games.get(client)
+  TwitchApi.Helix.Games.get(client, %{id: 21779})
+  TwitchApi.Helix.Games.get(client, %{id: [21779, 493057]})
 
   ```
 
@@ -26,24 +26,24 @@ defmodule Helix.Games do
   ## Examples
 
   ```elixir
-  Helix.Games.get(client, %{
+  TwitchApi.Helix.Games.get(client, %{
       id: [123, 342, 929, 100]
     }
   )
   ```
   """
 
-  def get(client = %Helix.Client{}, params \\ %{}) do
-    Client.get(client, @url, [], params)
+  def get(client = %TwitchApi.Client{}, params \\ %{}) do
+    Client.get(client, url(), [], params)
   end
 
   @doc """
   Gets the endpoint url for this resource
 
   ## Examples
-    iex> Helix.Games.url()
+    iex> TwitchApi.Helix.Games.url()
     "https://api.twitch.tv/helix/games"
   """
 
-  def url, do: Helix.process_request_url(@url)
+  def url, do: TwitchApi.Helix.url(@path)
 end

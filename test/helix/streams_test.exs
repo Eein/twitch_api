@@ -1,29 +1,35 @@
-defmodule Helix.StreamsTest do
+defmodule TwitchApi.Helix.StreamsTest do
   use ExUnit.Case, async: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
-  doctest Helix.Streams
+
+  doctest TwitchApi.Helix.Streams
+
+  alias TwitchApi.Client
+  alias TwitchApi.Helix.Streams
 
   setup do
     ExVCR.Config.filter_request_headers("Client-ID")
+    ExVCR.Config.filter_request_headers("Authorization")
+    {:ok, _token} = TwitchApi.TokenCache.get()
     HTTPoison.start()
   end
 
   test "streams request returns HTTP 200" do
     use_cassette "streams/get" do
-      client = Helix.Client.new()
-      res = Helix.Streams.get(client)
+      client = Client.new()
+      res = Streams.get(client)
       assert Enum.empty?(res.body["data"]) == false
     end
   end
 
   test "streams after request returns HTTP 200" do
     use_cassette "streams/get-after" do
-      client = Helix.Client.new()
+      client = Client.new()
 
       res =
-        Helix.Streams.get(client, %{
+        Streams.get(client, %{
           after:
-            "ZXlKeklqb3pOVE16Tnk0eU1qTTNPVEUyTmpnME56VXNJbVFpT21aaGJITmxMQ0owSWpwMGNuVmxmUT09IGV5SnpJam8wTWpNekxqY3dPRFV3TnpFeU5UY3lOaXdpWkNJNlptRnNjMlVzSW5RaU9uUnlkV1Y5"
+            "eyJiIjp7IkN1cnNvciI6ImV5SnpJam81T0RjNU1TNDBORFUzTkRZME5qWTROU3dpWkNJNlptRnNjMlVzSW5RaU9uUnlkV1Y5In0sImEiOnsiQ3Vyc29yIjoiZXlKeklqb3hOamMzTUM0NE1EVTVNelkzT0RJME1EWXNJbVFpT21aaGJITmxMQ0owSWpwMGNuVmxmUT09In19"
         })
 
       data = res.body["data"]
@@ -34,8 +40,8 @@ defmodule Helix.StreamsTest do
 
   test "streams first request returns HTTP 200" do
     use_cassette "streams/get-first" do
-      client = Helix.Client.new()
-      res = Helix.Streams.get(client, %{first: 7})
+      client = Client.new()
+      res = Streams.get(client, %{first: 7})
       data = res.body["data"]
       assert Enum.empty?(data) == false
       assert Enum.count(data) == 7

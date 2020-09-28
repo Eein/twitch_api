@@ -1,19 +1,21 @@
-defmodule Helix.Games.TopTest do
+defmodule TwitchApi.Helix.Games.TopTest do
   use ExUnit.Case, async: true
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
-  alias Helix.Games.Top
+  alias TwitchApi.Helix.Games.Top
 
-  doctest Helix.Games.Top
+  doctest TwitchApi.Helix.Games.Top
 
   setup do
     ExVCR.Config.filter_request_headers("Client-ID")
+    ExVCR.Config.filter_request_headers("Authorization")
+    {:ok, _token} = TwitchApi.TokenCache.get()
     HTTPoison.start()
   end
 
   test "games/top request returns HTTP 200" do
     use_cassette "games/top" do
-      client = Helix.Client.new()
+      client = TwitchApi.Client.new()
       res = Top.get(client)
       assert Enum.empty?(res.body["data"]) == false
     end
@@ -21,7 +23,7 @@ defmodule Helix.Games.TopTest do
 
   test "games/top after request returns HTTP 200" do
     use_cassette "games/top-after" do
-      client = Helix.Client.new()
+      client = TwitchApi.Client.new()
       res = Top.get(client, %{after: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"})
       data = res.body["data"]
       assert Enum.empty?(data) == false
@@ -31,7 +33,7 @@ defmodule Helix.Games.TopTest do
 
   test "games/top first request returns HTTP 200" do
     use_cassette "games/top-first" do
-      client = Helix.Client.new()
+      client = TwitchApi.Client.new()
       res = Top.get(client, %{first: 7})
       data = res.body["data"]
       assert Enum.empty?(data) == false
