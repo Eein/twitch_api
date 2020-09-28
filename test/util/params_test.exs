@@ -1,6 +1,6 @@
-defmodule Helix.Util.ParamsTest do
+defmodule TwitchApi.Util.ParamsTest do
   use ExUnit.Case, async: true
-  alias Helix.Util.Params
+  alias TwitchApi.Util.Params
 
   test "params_list_query_stringify/2 changes list of id with list of ids to query" do
     string = Params.params_list_query_stringify(:id, [123, 146, 283])

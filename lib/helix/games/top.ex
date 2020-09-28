@@ -1,11 +1,11 @@
-defmodule Helix.Games.Top do
-  alias Helix.Client
+defmodule TwitchApi.Helix.Games.Top do
+  alias TwitchApi.Client
 
   @moduledoc """
   Gets information about the top games and the streamers playing them on twitch
   """
 
-  @url "helix/games/top"
+  @path "games/top"
 
   @doc """
   Gets games sorted by number of current viewers on Twitch, most popular first.
@@ -14,13 +14,13 @@ defmodule Helix.Games.Top do
 
   ## Examples
   ```elixir
-  Helix.Games.Top.get(client)
-  Helix.Games.Top.get(client, %{
+  TwitchApi.Helix.Games.Top.get(client)
+  TwitchApi.Helix.Games.Top.get(client, %{
       first: 25,
       before: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"
     }
   )
-  Helix.Games.Top.get(client, %{
+  TwitchApi.Helix.Games.Top.get(client, %{
       after: "eyJzIjoyMCwiZCI6ZmFsc2UsInQiOnRydWV9"
     }
   )
@@ -28,17 +28,17 @@ defmodule Helix.Games.Top do
   ```
   """
 
-  def get(client = %Helix.Client{}, params \\ %{}) do
-    Client.get(client, @url, [], params)
+  def get(client = %TwitchApi.Client{}, params \\ %{}) do
+    Client.get(client, url(), [], params)
   end
 
   @doc """
   Gets the endpoint url for this resource
 
   ## Examples
-    iex> Helix.Games.Top.url()
+    iex> TwitchApi.Helix.Games.Top.url()
     "https://api.twitch.tv/helix/games/top"
   """
 
-  def url, do: Helix.process_request_url(@url)
+  def url, do: TwitchApi.Helix.url(@path)
 end

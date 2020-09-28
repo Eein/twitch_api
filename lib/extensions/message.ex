@@ -1,5 +1,5 @@
-defmodule Helix.Extensions.Message do
-  alias Helix.Client
+defmodule TwitchApi.Extensions.Message do
+  alias TwitchApi.Client
 
   @moduledoc """
   Methods for interacting with the extensions API
@@ -19,7 +19,7 @@ defmodule Helix.Extensions.Message do
 
   ## Examples
   ```elixir
-  Helix.Extensions.Message.post(client, %{
+  TwitchApi.Helix.Extensions.Message.post(client, %{
     channel_id => 123,
     message: %{anything: "youd like"}
   })
@@ -27,7 +27,7 @@ defmodule Helix.Extensions.Message do
   ```
   """
 
-  def post(client = %Helix.Client{}, body \\ "", params \\ []) do
+  def post(client = %TwitchApi.Client{}, body \\ "", params \\ []) do
     Client.post(client, @url, body, params)
   end
 
@@ -35,9 +35,9 @@ defmodule Helix.Extensions.Message do
   Gets the endpoint url for this resource
 
   ## Examples
-    iex> Helix.Extensions.Message.url(%{id:)
+    iex> TwitchApi.Extensions.Message.url(%{id:)
     "https://api.twitch.tv/extensions/message/top"
   """
 
-  def url, do: Helix.process_request_url(@url)
+  def url, do: TwitchApi.process_request_url(@url)
 end

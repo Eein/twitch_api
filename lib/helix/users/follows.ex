@@ -1,11 +1,11 @@
-defmodule Helix.Users.Follows do
-  alias Helix.Client
+defmodule TwitchApi.Helix.Users.Follows do
+  alias TwitchApi.Client
 
   @moduledoc """
   Gets information about users following on twitch
   """
 
-  @url "helix/users/follows"
+  @path "users/follows"
 
   @doc """
   Gets information on follow relationships between two Twitch users.
@@ -17,20 +17,20 @@ defmodule Helix.Users.Follows do
 
   ## Examples
   ```elixir
-  Helix.Users.Follows.get(client, %{
+  TwitchApi.Helix.Users.Follows.get(client, %{
       to_id: 23161357
     }
   )
-  Helix.Users.Follows.get(client, %{
+  TwitchApi.Helix.Users.Follows.get(client, %{
       from_id: 23161357
     }
   )
   ```
   """
 
-  def get(client = %Helix.Client{}, params \\ %{}) do
+  def get(client = %TwitchApi.Client{}, params \\ %{}) do
     if Map.has_key?(params, :to_id) or Map.has_key?(params, :from_id) do
-      Client.get(client, @url, [], params)
+      Client.get(client, url(), [], params)
     else
       raise "This endpoint requires from_id and/or to_id params to be valid"
     end
@@ -40,9 +40,9 @@ defmodule Helix.Users.Follows do
   Gets the endpoint url for this resource
 
   ## Examples
-    iex> Helix.Users.Follows.url()
+    iex> TwitchApi.Helix.Users.Follows.url()
     "https://api.twitch.tv/helix/users/follows"
   """
 
-  def url, do: Helix.process_request_url(@url)
+  def url, do: TwitchApi.Helix.url(@path)
 end

@@ -1,5 +1,5 @@
-defmodule Helix.Client do
-  alias Helix.Util.Params
+defmodule TwitchApi.Client do
+  alias TwitchApi.Util.Params
 
   @moduledoc """
   Builds the client for the API wrapper
@@ -22,8 +22,8 @@ defmodule Helix.Client do
 
   ## Examples
   ```elixir
-  Helix.Client.new()
-  => %Helix.Client{
+  TwitchApi.Client.new()
+  => %TwitchApi.Client{
     auth: %{client_id: "ABC123", client_secret: "DEF456"}
   }
   ```
@@ -32,21 +32,21 @@ defmodule Helix.Client do
   @spec new() :: t
   def new do
     auth = %{
-      client_id: Application.fetch_env!(:helix, :client_id),
-      client_secret: Application.fetch_env!(:helix, :client_secret)
+      client_id: Application.fetch_env!(:twitch_api, :client_id),
+      client_secret: Application.fetch_env!(:twitch_api, :client_secret)
     }
 
     new(auth)
   end
 
   @doc """
-  Explicitly takes a client id and secret and returns a `%Helix.Client{}`.
+  Explicitly takes a client id and secret and returns a `%TwitchApi.Client{}`.
   This is useful if you have many services that require different
   credentials, or if you are using elixir umbrellas.
 
   ## Examples
-      iex> Helix.Client.new(%{client_id: "ABC123", client_secret: "DEF456"})
-      %Helix.Client{
+      iex> TwitchApi.Client.new(%{client_id: "ABC123", client_secret: "DEF456"})
+      %TwitchApi.Client{
         auth: %{client_id: "ABC123", client_secret: "DEF456"}
       }
   """
@@ -74,17 +74,23 @@ defmodule Helix.Client do
 
   def get(client, path \\ "", headers \\ [], params \\ %{})
 
-  def get(client = %Helix.Client{}, path, headers, params) do
+  def get(client = %TwitchApi.Client{}, path, headers, params) do
     url = Params.url_params_list_parser(path, params)
-    headers = [{"Client-ID", client.auth.client_id} | headers]
-    Helix.get!(url, headers)
+    {:ok, token} = TwitchApi.TokenCache.get()
+
+    headers = [{"Client-ID", "#{client.auth.client_id}"} | headers]
+    headers = [{"Authorization", "Bearer #{token}"} | headers]
+    TwitchApi.get!(url, headers)
   end
 
   def post(client, path \\ "", body \\ "", headers \\ [])
 
-  def post(client = %Helix.Client{}, path, body, headers) do
+  def post(client = %TwitchApi.Client{}, path, body, headers) do
     url = Params.url_params_list_parser(path, %{})
-    headers = [{"Client-ID", client.auth.client_id} | headers]
-    Helix.post(url, body, headers)
+    # {:ok, token} = TwitchApi.TokenCache.get()
+
+    headers = [{"Client-ID", "#{client.auth.client_id}"} | headers]
+    # headers = [{"Authorization", "Bearer #{token}"} | headers]
+    TwitchApi.post!(url, body, headers)
   end
 end

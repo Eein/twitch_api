@@ -1,5 +1,5 @@
-defmodule Helix.Webhooks.Hub do
-  alias Helix.Client
+defmodule TwitchApi.Helix.Webhooks.Hub do
+  alias TwitchApi.Client
 
   @moduledoc """
   Handles subscription and unsubscription to twitch webhooks hub
