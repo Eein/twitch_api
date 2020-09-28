@@ -8,6 +8,6 @@ defmodule TwitchApi.ID do
   end
 
   def url(path) do
-    "#{endpoint}/#{path}"
+    "#{endpoint()}/#{path}"
   end
 end

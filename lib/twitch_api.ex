@@ -14,7 +14,7 @@ defmodule TwitchApi do
 
   def process_request_headers(headers) do
     [
-      {"Content-Type", "application/json"},
+      {"Content-Type", "application/json"}
     ] ++ headers
   end
 

@@ -40,7 +40,7 @@ defmodule TwitchApi.Helix.Streams do
   ```
   """
   def get(client = %TwitchApi.Client{}, params \\ %{}) do
-    Client.get(client, url, [], params)
+    Client.get(client, url(), [], params)
   end
 
   @doc """

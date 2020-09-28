@@ -8,6 +8,6 @@ defmodule TwitchApi.Helix do
   end
 
   def url(path) do
-    "#{endpoint}/helix/#{path}"
+    "#{endpoint()}/helix/#{path}"
   end
 end

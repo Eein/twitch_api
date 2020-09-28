@@ -5,23 +5,46 @@ defmodule TwitchApi.Helix.Webhooks.Hub do
   Handles subscription and unsubscription to twitch webhooks hub
   """
 
-  @url "helix/webhooks/hub"
+  @path "webhooks/hub"
+  @webhook_callback Application.get_env(:twitch_api, :webhook_callback_url)
 
-  def subscribe(client, callback, resource, lease \\ 864_000) do
-    Client.post(client, @url, [], %{
-      "hub.callback" => callback,
-      "hub.mode" => "subscribe",
-      "hub.topic" => resource,
-      "hub.lease_seconds" => lease
-    })
+  def subscribe(client, resource, callback \\ @webhook_callback, lease \\ 864_000) do
+    case callback do
+      nil ->
+        raise "Missing webhook callback url, please add one or specify in your config"
+
+      _ ->
+        Client.post(client, url(), [], %{
+          "hub.callback" => callback,
+          "hub.mode" => "subscribe",
+          "hub.topic" => resource,
+          "hub.lease_seconds" => lease
+        })
+    end
   end
 
-  def unsubscribe(client, callback, resource, lease \\ 864_000) do
-    Client.post(client, @url, [], %{
-      "hub.callback" => callback,
-      "hub.mode" => "unsubscribe",
-      "hub.topic" => resource,
-      "hub.lease_seconds" => lease
-    })
+  def unsubscribe(client, resource, callback \\ @webhook_callback, lease \\ 864_000) do
+    case callback do
+      nil ->
+        raise "Missing webhook callback url, please add one or specify in your config"
+
+      _ ->
+        Client.post(client, url(), [], %{
+          "hub.callback" => callback,
+          "hub.mode" => "unsubscribe",
+          "hub.topic" => resource,
+          "hub.lease_seconds" => lease
+        })
+    end
   end
+
+  @doc """
+  Gets the endpoint url for this resource
+
+  ## Examples
+    iex> TwitchApi.Helix.Webhooks.url()
+    "https://api.twitch.tv/helix/webhooks/hub"
+  """
+
+  def url, do: TwitchApi.Helix.url(@path)
 end

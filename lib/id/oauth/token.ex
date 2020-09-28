@@ -3,7 +3,6 @@ defmodule TwitchApi.ID.OAuth.Token do
   For interaction with id.twitch.tv
   """
 
-  alias TwitchApi.Client
   alias TwitchApi.ID
 
   @path "oauth2/token"

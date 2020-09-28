@@ -7,4 +7,5 @@ config :twitch_api,
   extension_client_secret: System.get_env("TWITCH_API_EXTENSION_CLIENT_SECRET"),
   id_endpoint: System.get_env("TWITCH_API_ID_ENDPOINT", "https://id.twitch.tv"),
   helix_endpoint: System.get_env("TWITCH_API_HELIX_ENDPOINT", "https://api.twitch.tv"),
-  extension_endpoint: System.get_env("TWITCH_API_EXTENSION_ENDPOINT", "https://api.twitch.tv")
+  extension_endpoint: System.get_env("TWITCH_API_EXTENSION_ENDPOINT", "https://api.twitch.tv"),
+  webhook_callback_url: System.get_env("TWITCH_API_HELIX_WEBHOOK_CALLBACK_URL", nil)

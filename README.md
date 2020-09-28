@@ -41,6 +41,7 @@ TWITCH_API_EXTENSION_CLIENT_SECRET=
 TWITCH_API_HELIX_ENDPOINT=
 TWITCH_API_EXTENSION_ENDPOINT=
 TWITCH_API_ID_ENDPOINT=
+TWITCH_API_HELIX_WEBHOOK_CALLBACK_URL=
 ```
 
 You may also use config:
@@ -53,7 +54,8 @@ config :twitch_api,
   extension_client_secret: System.get_env("TWITCH_API_EXTENSION_CLIENT_SECRET"),
   id_endpoint: System.get_env("TWITCH_API_ID_ENDPOINT"),
   helix_endpoint: System.get_env("TWITCH_API_HELIX_ENDPOINT"),
-  extension_endpoint: System.get_env("TWITCH_API_EXTENSION_ENDPOINT")
+  extension_endpoint: System.get_env("TWITCH_API_EXTENSION_ENDPOINT"),
+  webhook_callback_url: System.get_env("TWITCH_API_HELIX_WEBHOOK_CALLBACK_URL", nil)
 ```
 
 ## In Progress
